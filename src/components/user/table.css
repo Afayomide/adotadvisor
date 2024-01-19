@@ -101,8 +101,12 @@ tr:nth-child(even){
     .table-container{
         overflow-x:auto;
     }
-    /* .api-container{
-        margin-top: 40vh;
-    } */
+  
+}
+@media(max-height: 800px){
+    .api-container{
+        margin-top: 10rem;
+
+    }
 }
     
