@@ -68,7 +68,9 @@ const SignupForm = () => {
       <form onSubmit={handleSignup}>
         <p>Signup</p>
         <div className='green'>{check == true ? "checking your details....." : ""}</div>
-        {err}
+        <div className='error'>
+                {err} 
+        </div>
         <label htmlFor="username">
           Username:
         </label>
@@ -81,13 +83,7 @@ const SignupForm = () => {
           Password:
         </label>
         {/* <input type="password" id='password' value={password} onChange={(e) => setPassword(e.target.value)} /> */}
-        <div className='input-icons'>
-          <div className='icons' onClick={handlePassword}>  {changePassword ? <BsEyeFill className='eye'/> : <BsEyeSlashFill className='eye'/>}</div>
-                 <input className='input-field' type={changePassword ? "password" : "text"} id='password' value={password} onChange={(e) => {
-                  setErr("")
-                  setPassword(e.target.value)}} />        
-
-         </div>
+    
         <br />
         <label htmlFor="fullname">
           Fullname:
@@ -104,7 +100,14 @@ const SignupForm = () => {
           setErr("")
           setEmail(e.target.value)}} />
         
-        <br />
+        <br />    
+        <div className='input-icons'>
+          <div className='icons' onClick={handlePassword}>  {changePassword ? <BsEyeFill className='eye'/> : <BsEyeSlashFill className='eye'/>}</div>
+                 <input className='input-field' type={changePassword ? "password" : "text"} id='password' value={password} onChange={(e) => {
+                  setErr("")
+                  setPassword(e.target.value)}} />        
+
+         </div>
         <button type="submit">Signup</button>
       </form>
     </div>
