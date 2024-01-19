@@ -12,7 +12,7 @@ function Tolerance () {
   const handleSearch = async () => {
     try {
       // Replace with your server URL and API endpoint
-      const serverUrl = 'http://localhost:3001/api/search';
+      const serverUrl = 'https://adotadvisor-u4zq.vercel.app/api/search';
       
       const response = await axios.post(serverUrl, { level });
 

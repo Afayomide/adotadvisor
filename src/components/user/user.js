@@ -34,7 +34,6 @@ function User({token, onLogout}){
           // You can verify the token on the client side if needed
           setAuthenticated(true);
           // Fetch additional user information if required
-          setName("John Doe"); // Replace with actual user info fetch
         } else {
           setAuthenticated(false);
           navigate('/');
@@ -45,7 +44,7 @@ function User({token, onLogout}){
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await axios.get('http://localhost:3001/api/user', {
+          const response = await axios.get('https://adotadvisor-u4zq.vercel.app/api/user', {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -60,7 +59,7 @@ function User({token, onLogout}){
       };
   
       fetchData();
-    }, [token]);
+    }, []);
 
 
     return (
