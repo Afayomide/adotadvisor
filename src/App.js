@@ -8,6 +8,13 @@ import SignupForm from './components/forms/signup';
 import LoginForm from './components/forms/login';
 import User from './components/user/user';
 function App() {
+  
+  useEffect(()=>{
+      setTimeout(() => {
+        localStorage.removeItem('adotadvisortoken');
+      }, 600000);
+    }
+  )
   return (
     <div className="App">
     <Header/>
