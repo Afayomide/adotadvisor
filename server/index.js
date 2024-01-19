@@ -59,6 +59,11 @@ function generateToken(user) {
   return jwt.sign({ sub: user.id, username: user.username }, secretKey, { expiresIn: '1h' });
 }
 
+
+app.get("/", (req,res)=>{
+  res.send("hello")
+})
+
 app.post("/api/login", async (req,res) =>{
  
   const { username, password } = req.body;
