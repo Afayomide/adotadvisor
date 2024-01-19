@@ -74,7 +74,7 @@ h3{
   display: flex;
   justify-content: center;
   align-items: center; 
-  margin: 10vh 0;
+  margin: 15vh 0;
 
 }
 .home-buttons:hover{
@@ -166,17 +166,19 @@ h3{
 }
 
 @media(max-width: 800px) {
+ 
   .about{
     flex-direction: column;
   }
   .home-robot{
-    margin-top: 2rem;
-    width: 45vw
+    margin-top: 6rem;
+    width: 80vw
   }
   .home-container{
     padding-top: 5vh;
   }
   h3{
+    margin-top: 3vh;;
      font-size: 2rem;
   }
   .homecard{
