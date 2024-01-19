@@ -1,0 +1,19 @@
+.search-form{
+    display: flex;
+    justify-content: center;
+}
+.search-form a{
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    margin-right: var(--homebuttons); 
+    
+}
+.profile-img{
+    width: 10rem;
+}
+.search-result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

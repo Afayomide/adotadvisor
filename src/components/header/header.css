@@ -1,0 +1,14 @@
+.h1{
+    font-weight: 700;
+}
+
+nav{
+    margin: 0 2rem;
+    border-bottom: solid 2px rgb(185, 178, 178) !important;
+    
+}
+.roboimg{
+    width: 5rem;
+    height: 4rem;
+    border-radius: 1rem;
+}
