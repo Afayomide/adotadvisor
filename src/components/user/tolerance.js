@@ -9,7 +9,9 @@ function Tolerance ({username}) {
   const [resultData, setResultData] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const handleSearch = async () => {
+  const handleSearch = async (e) => {    
+    e.preventDefault()
+
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
@@ -33,7 +35,7 @@ function Tolerance ({username}) {
 <div>
 
 <div className='search-form'>
-<form>          
+<form onSubmit={handleSearch}>          
 <img className="profile-img" src={profile}/>
 <div>
      <label className='search-label' for="range">
@@ -54,11 +56,12 @@ function Tolerance ({username}) {
                onChange={changeLevel}
                min= "0"
                max= "10"
-               value={level}/>
+               value={level}/>     
+               <div>               
+               <button type='submit' >Check portfolio</button>
+</div>             
         </form>
-        <div>
-              <button onClick={handleSearch}>Check portfolio</button>
-</div>
+    
 </div>
 {loading ? (
           <div className="tolerance-spinner">
