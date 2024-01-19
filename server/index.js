@@ -110,9 +110,10 @@ app.post('/api/signup', async (req, res) => {
     });
     await user.save();
     res.json({ success: true });
-  } catch (error) {
+  } 
+  catch (error) {
     console.error('Error:', error.message);
-    res.status(500).json({ success: false, message: 'Internal server error' });
+    res.json({ success: false, message: 'Internal server error' });
   }
 });
 

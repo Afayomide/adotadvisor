@@ -79,12 +79,9 @@ const SignupForm = () => {
           setUsername(e.target.value)}} />
       
         <br />
-        <label htmlFor="password">
-          Password:
-        </label>
+       
         {/* <input type="password" id='password' value={password} onChange={(e) => setPassword(e.target.value)} /> */}
-    
-        <br />
+
         <label htmlFor="fullname">
           Fullname:
         </label>
@@ -101,7 +98,10 @@ const SignupForm = () => {
           setEmail(e.target.value)}} />
         
         <br />    
-        <div className='input-icons'>
+        <div className='input-icons'> 
+        <label htmlFor="password">
+          Password:
+        </label>
           <div className='icons' onClick={handlePassword}>  {changePassword ? <BsEyeFill className='eye'/> : <BsEyeSlashFill className='eye'/>}</div>
                  <input className='input-field' type={changePassword ? "password" : "text"} id='password' value={password} onChange={(e) => {
                   setErr("")
