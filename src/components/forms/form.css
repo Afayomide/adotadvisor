@@ -26,12 +26,12 @@
     align-items: center;
 }
 
-.icons {
+.pwd-icons {
     z-index: 5;
     position: absolute;
 }
  
-.input-icons {
+.pwd-input-icons {
     width: 100%;
     margin-bottom: 10px;
 }
@@ -41,7 +41,7 @@
  color: var(--color-primary)
 }
 
-.input-field {
+.pwd-input-field {
     z-index: -1;
     width: 100%;
     text-align: center;

@@ -98,15 +98,15 @@ const SignupForm = () => {
           setEmail(e.target.value)}} />
         
         <br />    
-        <div className='input-icons'> 
         <label htmlFor="password">
           Password:
-        </label>
-          <div className='icons' onClick={handlePassword}>  {changePassword ? <BsEyeFill className='eye'/> : <BsEyeSlashFill className='eye'/>}</div>
-                 <input className='input-field' type={changePassword ? "password" : "text"} id='password' value={password} onChange={(e) => {
+
+        </label>        
+        <div className='pwd-input-icons'> 
+          <div className='pwd-icons' onClick={handlePassword}>  {changePassword ? <BsEyeFill className='eye'/> : <BsEyeSlashFill className='eye'/>}</div>
+                 <input className='pwd-input-field' type={changePassword ? "password" : "text"} id='password' value={password} onChange={(e) => {
                   setErr("")
                   setPassword(e.target.value)}} />        
-
          </div>
         <button type="submit">Signup</button>
       </form>
