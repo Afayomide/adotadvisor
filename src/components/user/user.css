@@ -1,5 +1,6 @@
 .user-container{
     text-align: center;
+
 }
 .no-content{
     height: 100vh;
@@ -9,6 +10,12 @@
     color: var(--color-primary);
 }
 .welcome-logout{
+    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 5rem;
+
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
+

@@ -9,13 +9,21 @@ nav{
     padding-bottom:0 !important;
     padding-left: 0 !important;
     padding-right:0 !important;
-    border-bottom: solid 2px rgb(185, 178, 178) !important;
+    /* border-bottom: solid 2px rgb(185, 178, 178) !important; */
     border-width: 80%;
+
+}
+header{
+background-color: rgba(225, 233, 227, 0.3);
+
 }
 .roboimg{
     width: 5rem;
     height: 4rem;
     border-radius: 1rem;
+}
+.navbar-toggler{
+    background-color: #1111 !important;
 }
 
 @media(max-width: 800px) {

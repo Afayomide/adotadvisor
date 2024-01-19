@@ -26,7 +26,7 @@ const LoginForm = () => {
         const { success } = response.data;
 
       if (success) {
-        localStorage.setItem('token', token);
+        localStorage.setItem('adotadvisortoken', token);
         navigate("/user")
         setErr(success)
         console.log('Login successful. Token:');

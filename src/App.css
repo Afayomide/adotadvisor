@@ -27,6 +27,9 @@ button:hover{
  color: var(--color-primary) !important;
  border: 2px solid var(--color-primary);
 }
+button{
+  height: 100%;
+}
  
 body{
   scroll-behavior: smooth !important;
@@ -191,5 +194,8 @@ h3{
   .card-texts{
     width: 100%;
     font-size: .8rem;
+  }
+  .home-buttons{
+    margin: 5rem 0;
   }
 }

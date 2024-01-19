@@ -9,13 +9,13 @@ import Tolerance from './tolerance';
 function User({token, onLogout}){
     const [authenticated, setAuthenticated] = useState(false);
     const [message, setMessage] = useState('');
-   const [name, setName] = useState("User")
-    const navigate = useNavigate()
+   const [name, setName] = useState("") 
+      const navigate = useNavigate()
     
 
     const handleLogout = () => {
         // Clear the token from localStorage (or sessionStorage)
-        localStorage.removeItem('token');
+        localStorage.removeItem('adotadvisortoken');
         setAuthenticated(false);
           navigate("/login")
           // You may want to redirect the user or perform other actions upon logout
@@ -28,7 +28,7 @@ function User({token, onLogout}){
 
       useEffect(() => {
         // Check if the user is authenticated using the token stored in localStorage
-        const storedToken = localStorage.getItem('token');
+        const storedToken = localStorage.getItem('adotadvisortoken');
     
         if (storedToken) {
           // You can verify the token on the client side if needed
@@ -40,7 +40,7 @@ function User({token, onLogout}){
         }
       }, [navigate]);
     
-    
+      
     useEffect(() => {
       const fetchData = async () => {
         try {
@@ -50,18 +50,17 @@ function User({token, onLogout}){
             },
           });
   
-          setMessage(response.data.message);
-          setName(response.data.name
-            )
-
-        } catch (error) {
+          setMessage(response.data.message); 
+          setName(response.data.name);
+        } 
+        catch (error) {
           console.error('Error:', error);
           setMessage('Error fetching data');
         }
       };
-  
+
       fetchData();
-    },);
+    });
 
 
     return (
@@ -69,10 +68,10 @@ function User({token, onLogout}){
         {authenticated ? (
       <div className='user-container'>
       <div className='welcome-logout'>
-        <h1>Welcome <span className='green-name'>{name.charAt(0).toUpperCase() + name.slice(1)}</span></h1>
+        <h1>Welcome <span className='green-name'>{name}</span></h1>
         <button onClick={handleLogout}>Logout</button>
        </div>
-        <Tolerance username = {name.charAt(0).toUpperCase() + name.slice(1)}/>
+        <Tolerance username = {name}/>
       
       </div>)  :
       <div className='noContent'>

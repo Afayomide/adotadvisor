@@ -10,9 +10,9 @@ import Robot from "../../assets/robot.webp"
 
 function Header() {
   return (
-    <>
+    <header>
       {['sm'].map((expand) => (   
-        <Navbar key={expand} expand={expand} className=" mb-3">
+        <Navbar key={expand} expand={expand} >
           <Container fluid>
             <Navbar.Brand className="h1" href="/"><img className='roboimg' src={Robot}/> ADOT-Advisor</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -61,7 +61,7 @@ function Header() {
           </Container>
         </Navbar>
       ))}
-    </>
+    </header>
   );
 }
 

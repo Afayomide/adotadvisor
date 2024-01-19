@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import "./tolerance.css"
 import profile from "../../assets/profile.png"
@@ -7,9 +7,13 @@ function Tolerance ({username}) {
     
   const [level, setLevel] = useState('');
   const [resultData, setResultData] = useState(null);
-
+  const [loading, setLoading] = useState(false);
 
   const handleSearch = async () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
     try {
       // Replace with your server URL and API endpoint
       const serverUrl = 'https://adotadvisor-u4zq.vercel.app/api/search';
@@ -29,10 +33,12 @@ function Tolerance ({username}) {
 <div>
 
 <div className='search-form'>
-<form>
+<form>          
+<img className="profile-img" src={profile}/>
 <div>
      <label className='search-label' for="range">
-            Please enter your risk tolerance level
+            Please enter your risk tolerance level<br/>
+            from 1 -10
             </label> 
 </div>
           
@@ -42,7 +48,9 @@ function Tolerance ({username}) {
               min="0"
                max="10"
                value={level}></input> */}
-               <input type='num'
+               <input
+               className='level-input'
+                type='number'
                onChange={changeLevel}
                min= "0"
                max= "10"
@@ -52,11 +60,13 @@ function Tolerance ({username}) {
               <button onClick={handleSearch}>Check portfolio</button>
 </div>
 </div>
-
-        {resultData && (
+{loading ? (
+          <div className="tolerance-spinner">
+          <div className="spinner"></div>
+      </div>) :
+       (resultData && (
         <div className='search-result-container'>
           <h3><span className='green-name'>{username}'s</span> portfolio:</h3>
-          <img className="profile-img" src={profile}/>
             {resultData.map((item) => (
               <div key={item._id}>
 
@@ -126,7 +136,8 @@ function Tolerance ({username}) {
            </div>
             ))}
         </div>
-      )}
+      ))
+}
 </div>
     )
 }

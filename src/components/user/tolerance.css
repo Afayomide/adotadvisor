@@ -27,3 +27,17 @@
 .search-result p:nth-of-type(2){
     color: var(--color-primary)
 }
+.level-input{
+    text-align: center;
+    width: 5rem;
+    margin-top: 1rem;
+}
+.tolerance-spinner{
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+}

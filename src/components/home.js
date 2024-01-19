@@ -1,9 +1,23 @@
+import { useState,useEffect } from "react"
 import robot2 from "../assets/robot2.webp"
 import HomeData from "./homedata"
 import Card from "./homecard"
 import Table from "./user/table"
 
 function Home() {
+const [route, getRoute] = useState("/login")
+const token =localStorage.getItem("adotadvisortoken")
+
+useEffect( ()=>{
+  if (token){
+    getRoute("/user")
+}  
+else(
+    getRoute("/login")
+)
+}
+
+)
 return(
 <div className="home-container">
 
@@ -17,7 +31,7 @@ return(
     </div>
 </div>
    <div className="home-buttons">
-    <a href="/login">Login</a>
+    <a href={route}>Login</a>
     <a href="/signup">Signup</a>
    </div>
    </div>
