@@ -1,6 +1,9 @@
 .search-form{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 }
 .search-form a{
     background-color: var(--color-primary);
@@ -16,4 +19,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.search-result p:nth-of-type(1){
+    margin-right: .2rem;
+    text-align: start;
+}
+.search-result p:nth-of-type(2){
+    color: var(--color-primary)
 }

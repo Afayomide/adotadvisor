@@ -15,8 +15,21 @@
   --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
   --homebuttons: 2rem;
 }
+button{
+  background-color: var(--color-primary) !important;
+  color: var(--bgcolor)!important;
+  outline: none !important;
+  border: none;
+  text-align: center;
+}
+button:hover{
+ background-color: var(--bgcolor) !important;
+ color: var(--color-primary) !important;
+ border: 2px solid var(--color-primary);
+}
  
 body{
+  scroll-behavior: smooth !important;
   color: var(--fontcolor);
   background-color: var(--bgcolor);
 }

@@ -9,7 +9,7 @@ import Tolerance from './tolerance';
 function User({token, onLogout}){
     const [authenticated, setAuthenticated] = useState(false);
     const [message, setMessage] = useState('');
-    const [name, setName] = useState("")
+   const [name, setName] = useState("User")
     const navigate = useNavigate()
     
 
@@ -51,7 +51,9 @@ function User({token, onLogout}){
           });
   
           setMessage(response.data.message);
-          setName(response.data.name)
+          setName(response.data.name
+            )
+
         } catch (error) {
           console.error('Error:', error);
           setMessage('Error fetching data');
@@ -59,18 +61,18 @@ function User({token, onLogout}){
       };
   
       fetchData();
-    }, []);
+    },);
 
 
     return (
         <div>
         {authenticated ? (
       <div className='user-container'>
-        <h1>Welcome {name}</h1>
-        <p>{token}</p>
+      <div className='welcome-logout'>
+        <h1>Welcome <span className='green-name'>{name.charAt(0).toUpperCase() + name.slice(1)}</span></h1>
         <button onClick={handleLogout}>Logout</button>
-       
-        <Tolerance/>
+       </div>
+        <Tolerance username = {name.charAt(0).toUpperCase() + name.slice(1)}/>
       
       </div>)  :
       <div className='noContent'>

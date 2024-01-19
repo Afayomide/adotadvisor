@@ -3,7 +3,7 @@ import axios from 'axios';
 import "./tolerance.css"
 import profile from "../../assets/profile.png"
 
-function Tolerance () {
+function Tolerance ({username}) {
     
   const [level, setLevel] = useState('');
   const [resultData, setResultData] = useState(null);
@@ -48,19 +48,21 @@ function Tolerance () {
                max= "10"
                value={level}/>
         </form>
-               <button onClick={handleSearch}>submit</button>
+        <div>
+              <button onClick={handleSearch}>Check portfolio</button>
+</div>
 </div>
 
         {resultData && (
         <div className='search-result-container'>
-          <h3>Search Results:</h3>
+          <h3><span className='green-name'>{username}'s</span> portfolio:</h3>
           <img className="profile-img" src={profile}/>
             {resultData.map((item) => (
               <div key={item._id}>
 
               <div className='search-result'>
               <p>
-              Risk Score
+              Risk Score= 
               </p>
               <p>
               {item.RiskScore}
@@ -69,52 +71,52 @@ function Tolerance () {
 
 
               <div className='search-result'> 
-              <p>Nigerian Stocks=</p>
+              <p>Nigerian Stocks =</p>
               <p>{item.nigerianStocks}</p>
               </div>
 
               <div className='search-result'> 
-              <p>Foreign Stocks=</p>
+              <p>Foreign Stocks =</p>
               <p>{item.foreignStocks}</p>
               </div>
 
               <div className='search-result'> 
-              <p>Tech Stocks=</p>
+              <p>Tech Stocks =</p>
               <p>{item.techStocks}</p>
               </div>
 
               <div className='search-result'> 
-              <p>Emerging Stocks=</p>
+              <p>Emerging Stocks =</p>
               <p>{item.emergingStocks}</p>
               </div>
 
               <div className='search-result'> 
-              <p>Nigerian Bonds=</p>
+              <p>Nigerian Bonds =</p>
               <p>{item.nigerianBonds}</p>
               </div>
 
               <div className='search-result'> 
-              <p>Foreign Bonds=</p>
+              <p>Foreign Bonds =</p>
               <p>{item.foreignBonds}</p>
               </div>
 
               <div className='search-result'> 
-              <p>Commodities=</p>
+              <p>Commodities =</p>
               <p>{item.commodities}</p>
               </div>
 
               <div className='search-result'> 
-              <p>Real Estate=</p>
+              <p>Real Estate =</p>
               <p>{item.realEstate}</p>
               </div>
 
               <div className='search-result'> 
-              <p>T-Bills=</p>
+              <p>T-Bills =</p>
               <p>{item.tBills}</p>
               </div>
 
               <div className='search-result'> 
-              <p>Alternative=</p>
+              <p>Alternative =</p>
               <p>{item.Alternative}</p>
               </div>
               

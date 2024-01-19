@@ -15,7 +15,9 @@
   --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
   --homebuttons: 2rem;
 }
-
+.error{
+    color: var(--color-tertiary-darker);
+}
 .form{
     background-color: rgba(94, 197, 118, .3);
     border-radius: 2rem;    
@@ -40,7 +42,7 @@
 input,textarea{
     width: 30em;
     margin-bottom: 1em  ;
-    border: 2px dotted  grey;
+    border: 2px dotted  var(--color-primary);
 }
 
 input:active{

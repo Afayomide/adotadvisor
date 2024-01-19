@@ -48,7 +48,7 @@ const LoginForm = () => {
     </div>
     <form onSubmit={handleLogin}>
     <p>Login</p> 
-    {err}
+    <div className='error'>{err}</div>
       <label for="username">
         Username:
         </label>
