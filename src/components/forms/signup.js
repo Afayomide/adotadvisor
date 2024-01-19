@@ -16,7 +16,7 @@ const SignupForm = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
 
-    const serverUrl = 'http://localhost:3001/api/signup';
+    const serverUrl = 'https://adotadvisor-u4zq.vercel.app/api/signup';
 
     try {
       const response = await axios.post(serverUrl, {

@@ -16,7 +16,7 @@ function Table () {
 
     useEffect(() => {
         // Fetch all blog posts
-        axios.get('http://localhost:3001/api/instruments')
+        axios.get('https://adotadvisor-u4zq.vercel.app/api/instruments')
           .then(response => {
             setData(response.data);
           })
