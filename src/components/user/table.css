@@ -4,7 +4,7 @@
     animation-fill-mode: forwards;
 }
 .api-container{
-    margin-top: 5vh;
+    margin-top: 10vh;
        margin-bottom: 10vh;
        text-align: center;
 
@@ -94,12 +94,15 @@ tr:nth-child(even){
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 980px) {
     table{
         width: 100%;
     }
     .table-container{
         overflow-x:auto;
     }
+    /* .api-container{
+        margin-top: 40vh;
+    } */
 }
     
