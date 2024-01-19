@@ -36,7 +36,7 @@ const HomeData =[
     },
     {
         icon: <BsCash/>,
-        h3: "Trusted And Approved",
+        h3: "Guaranteed Profit",
         imgsrc: src3,
         text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
         molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum

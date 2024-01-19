@@ -13,7 +13,7 @@ function Footer () {
     <section className="footer-first-section">
          <h2>
 <img src={Robot} className="roboimg"/>
-    ROBOADVISOR
+    ADOT-Advisor
      </h2>
      <ul>
     
@@ -25,7 +25,7 @@ function Footer () {
       <br/>
          Lagos Ikeja<br/>
        no 24, Allen Road, shop Plaza <br/>
-        Laogs State<br/>
+        Lagos State<br/>
       </p>
      </div>
 
@@ -49,7 +49,7 @@ function Footer () {
      <section className="second-section">
         <hr/>
         <p>
-        © 2024 ROBO-Advisor. All rights reserved.<br/>
+        © 2024 ADOT-Advisor. All rights reserved.<br/>
 Reproduction, in whole or in part, is prohibited.
         </p>
      </section>   
