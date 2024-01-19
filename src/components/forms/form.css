@@ -25,6 +25,34 @@
     justify-content: center;
     align-items: center;
 }
+
+.icons {
+    z-index: 5;
+    position: absolute;
+}
+ 
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+ 
+.eye{
+ margin-left: 1rem;
+ color: var(--color-primary)
+}
+
+.input-field {
+    z-index: -1;
+    width: 100%;
+    text-align: center;
+}
+.green{
+    color: green;
+}
+
+
+
+
 .form form{
     text-align: center;
     display: flex;

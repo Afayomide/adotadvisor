@@ -96,9 +96,7 @@ app.post('/api/signup', async (req, res) => {
   const { fullname, username, email, password } = req.body;
 
   if (!username || !password || !fullname || !email) {
-    return res
-      .status(400)
-      .json({ success: false, message: 'Username and password are required' });
+    res.json({ success: false, message: 'Username and password are required' });
   }
 
   try {
@@ -110,7 +108,6 @@ app.post('/api/signup', async (req, res) => {
       email,
       password: hashedPassword,
     });
-
     await user.save();
     res.json({ success: true });
   } catch (error) {
