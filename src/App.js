@@ -12,9 +12,7 @@ import User from './components/user/user';
 function App() {
 
   useEffect(()=>{
-      setTimeout(() => {
-        localStorage.removeItem('adotadvisortoken');
-      }, 600000);
+    
     }
   )
   return (

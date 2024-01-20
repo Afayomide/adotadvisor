@@ -169,7 +169,7 @@ h3{
 }
 
 @media(max-width: 800px) {
- 
+
   .about{
     flex-direction: column;
   }
@@ -199,3 +199,15 @@ h3{
     margin: 5rem 0;
   }
 }
+.green-link{
+  text-align: center;
+  color: var(--color-primary);
+  font-size: smaller;
+}
+
+/* @media (max-width: 750px){
+  .green-link{
+    margin-top: 10rem;
+  }
+ 
+} */

@@ -47,6 +47,10 @@ const LoginForm = () => {
         navigate("/user")
         setErr(success)
         console.log('Login successful. Token:');
+
+        setInterval(() => {
+          localStorage.removeItem('adotadvisortoken');
+        }, 600000);
       } else {
         console.error('Login failed:', response.data.message);
  setErr(response.data.message)

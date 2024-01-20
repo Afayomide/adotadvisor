@@ -20,7 +20,6 @@ else(
 )
 return(
 <div className="home-container">
-
 <div className="first-section">
 <div className="about">
      <h3>
@@ -35,7 +34,13 @@ return(
     <a href="/signup">Signup</a>
    </div>
    </div>
+   <div>
+       <a className="green-link" href="/afayomidePresentation.pdf" download >Download my presentation</a>
+
+   </div>
+
    <Table/>
+
 
 <div id="about" className="homecard-container">
     {HomeData.map(Card)}
