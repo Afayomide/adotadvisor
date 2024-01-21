@@ -30,6 +30,7 @@ app.use(bodyParser.raw());
 app.use(bodyParser.text());
 
 app.get('/', (req, res) => {
+  res.send('hello');
 });
 
 const secretKey = '9ffbceda69ff903370209d5029c4416b4890df44f9c19962430765595735a57d';
