@@ -18,27 +18,22 @@ function User({token, onLogout}){
         localStorage.removeItem('adotadvisortoken');
         setAuthenticated(false);
           navigate("/login")
-          // You may want to redirect the user or perform other actions upon logout
                 
-        // Call the onLogout callback to update the authentication state
         if (onLogout) {
             onLogout();
           }
       };
 
       useEffect(() => {
-        // Check if the user is authenticated using the token stored in localStorage
         const storedToken = localStorage.getItem('adotadvisortoken');
     
         if (storedToken) {
-          // You can verify the token on the client side if needed
           setAuthenticated(true);
-          // Fetch additional user information if required
         } else {
           setAuthenticated(false);
           navigate('/');
         }
-      }, [navigate]);
+      });
     
       
     useEffect(() => {
@@ -51,7 +46,12 @@ function User({token, onLogout}){
           });
   
           setMessage(response.data.message); 
-          setName(response.data.name);
+          if(name == undefined){
+            setName("User")
+          }
+          else{
+            setName(response.data.name);
+          }
         } 
         catch (error) {
           console.error('Error:', error);

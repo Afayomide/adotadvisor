@@ -9,6 +9,8 @@ function Tolerance ({username}) {
   const [resultData, setResultData] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  const withs = `${username}'s`
+
   const handleSearch = async (e) => {    
     e.preventDefault()
 
@@ -69,7 +71,7 @@ function Tolerance ({username}) {
       </div>) :
        (resultData && (
         <div className='search-result-container'>
-          <h3><span className='green-name'>{username}'s</span> portfolio:</h3>
+          <h3><span className='green-name'>{withs}</span> portfolio:</h3>
             {resultData.map((item) => (
               <div key={item._id}>
 
