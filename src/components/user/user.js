@@ -46,7 +46,7 @@ function User({token, onLogout}){
           });
   
           if(name == undefined || name == ""){
-            setName("")
+            setName("User")
           }
           else{
             setName(response.data.name);
