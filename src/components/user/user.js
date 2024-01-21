@@ -16,6 +16,7 @@ function User({token, onLogout}){
     const handleLogout = () => {
         // Clear the token from localStorage (or sessionStorage)
         localStorage.removeItem('adotadvisortoken');
+        localStorage.removeItem("username")
         setAuthenticated(false);
           navigate("/login")
                 
@@ -38,14 +39,22 @@ function User({token, onLogout}){
       
     useEffect(() => {
       const fetchData = async () => {
-        try {           
+        try {
           const response = await axios.get('https://adotadvisor-u4zq.vercel.app/api/user', {
             headers: {
               Authorization: `Bearer ${token}`,
-            }
-          }); 
-          const username = localStorage.getItem('username');
-            setName(username);
+            },
+          });
+          localStorage.setItem("username", response.data.name)
+
+          const whois = localStorage.getItem("username")
+  
+          if(name == undefined){
+            setName("User")
+          }
+          else{
+            setName(whois);
+          }
         } 
         catch (error) {
           console.error('Error:', error);
