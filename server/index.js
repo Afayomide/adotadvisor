@@ -29,7 +29,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.raw());
 app.use(bodyParser.text());
 
-
+app.get('/', (req, res) => {
+});
 
 const secretKey = '9ffbceda69ff903370209d5029c4416b4890df44f9c19962430765595735a57d';
 const authenticate = (req, res, next) => {
