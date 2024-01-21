@@ -38,19 +38,14 @@ function User({token, onLogout}){
       
     useEffect(() => {
       const fetchData = async () => {
-        try {
+        try {           
+         const username = localStorage.getItem('username');
           const response = await axios.get('https://adotadvisor-u4zq.vercel.app/api/user', {
             headers: {
               Authorization: `Bearer ${token}`,
-            },
+            }
           });
-  
-          if(name == undefined || name == ""){
-            setName("User")
-          }
-          else{
-            setName(response.data.name);
-          }
+            setName(username);
         } 
         catch (error) {
           console.error('Error:', error);

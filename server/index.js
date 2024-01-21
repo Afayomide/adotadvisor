@@ -73,10 +73,11 @@ function generateToken(user) {
 app.post('/api/login', async (req, res) => {
   const { username, password } = req.body;
   try {
-    const user = await User.findOne({ username });
+    const user = await User.findOne({ username })
     req.app.set("name", username) 
     if (user && bcrypt.compareSync(password, user.password)) {
-      const token = generateToken(user);
+      const token = generateToken(user);   
+       localStorage.setItem('username', username);
       res.cookie('token', token, { httpOnly: true });
       res.json({ success: true, token });
     } else {
