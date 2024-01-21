@@ -45,9 +45,8 @@ function User({token, onLogout}){
             },
           });
   
-          setMessage(response.data.message); 
-          if(name == undefined){
-            setName("User")
+          if(name == undefined || name == ""){
+            setName("")
           }
           else{
             setName(response.data.name);
@@ -60,7 +59,7 @@ function User({token, onLogout}){
       };
 
       fetchData();
-    });
+    },[]);
 
 
     return (
