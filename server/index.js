@@ -29,14 +29,18 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.raw());
 app.use(bodyParser.text());
 
+  const targetURL = 'https://github.com/Afayomide/adotadvisor/tree/main/server';
+
 app.get('/', (req, res) => {
-  res.send("active server, created by Afayomide Oluwaseyi. Go to <a href='/https://github.com/Afayomide/adotadvisor/tree/main/server'>Github</a> to see code")
+  res.redirect(targetURL);
+
 });
 app.get("/api/search", (req,res) =>{
-  res.send("active server, created by Afayomide Oluwaseyi. Go to <a href='/https://github.com/Afayomide/adotadvisor/tree/main/server'>Github</a> to see code")
+  res.redirect(targetURL);
 })
 app.get("/api", (req,res) =>{
-  res.send("active server, created by Afayomide Oluwaseyi. Go to <a href='/https://github.com/Afayomide/adotadvisor/tree/main/server'>Github</a> to see code")
+  // res.send("active server, created by Afayomide Oluwaseyi. Go to <a href='/https://github.com/Afayomide/adotadvisor/tree/main/server'>Github</a> to see code")
+  res.redirect(targetURL);
 })
 
 const secretKey = '9ffbceda69ff903370209d5029c4416b4890df44f9c19962430765595735a57d';
